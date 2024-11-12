@@ -1,0 +1,49 @@
+.numberlist{
+    list-style: none;
+    counter-reset: title;
+    padding-left: 0;
+}
+
+.numberlist dt{
+    counter-increment: title;
+    margin-bottom: 10px; /* リスト間のスペース */
+    position: relative; /* 番号を絶対位置で配置するために必要 */
+    padding-left: 30px; /* 番号とテキストの間にスペースを作る */
+
+}
+
+.numberlist dt::before {
+    content: counter(title) ". "; /* カウンターを番号として表示 */
+    position: absolute;
+    left: 0; /* 番号を左端に配置 */
+    font-weight: bold; /* 番号を太字にする */
+    color: rgb(255, 212, 0);
+  }
+.title{
+    color: rgb(255, 212, 0);
+}
+
+.hob{
+    background:red;
+    width: 20%;
+}
+.mypro{
+    background: darkcyan;
+    width: 20%;
+}
+
+.skill{
+    background: forestgreen;
+    width: 20%;
+}
+.ad{
+    background: blue;
+    width: 20%;
+}
+
+.main {
+    width: 80vw;
+    height:80vh ;
+    outline: dashed 1px   white;
+    margin: 10%;
+}

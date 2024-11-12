@@ -4,7 +4,7 @@ services:
     build: ./view
     container_name: "kure-portfolio"
     volumes:
-      - ./view:/app
+      - ./view/portfolio/portfolio:/app
     command: sh -c "npm install && npm run dev"
     ports:
       - "3000:3000"

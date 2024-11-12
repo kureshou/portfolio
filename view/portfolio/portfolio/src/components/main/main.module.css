@@ -1,0 +1,33 @@
+
+.content{
+    color: rgb(255,212, 0);
+    width: 100%;
+    
+   
+}
+
+
+
+.contlist{
+    list-style: none;
+    counter-reset: cont;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contlist dt{
+    counter-increment: cont;
+    margin-bottom: 10px; /* リスト間のスペース */
+    position: relative; /* 番号を絶対位置で配置するために必要 */
+    padding-left: 30px; /* 番号とテキストの間にスペースを作る */
+
+}
+
+.contlist dt::before {
+    content: counter(cont) ". "; /* カウンターを番号として表示 */
+    position: absolute;
+    left: 0; /* 番号を左端に配置 */
+    font-weight: bold; /* 番号を太字にする */
+    color: rgb(255, 212, 0);
+}
